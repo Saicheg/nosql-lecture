@@ -22,3 +22,4 @@ Materials for NoSql lecture for juniours
 * http://www.mongodb.org/
 * http://nosql-database.org/
 * http://www.networkworld.com/news/tech/2012/102212-nosql-263595.html
+* https://speakerdeck.com/rb2k/nosql-lunch-and-learn

@@ -1,1 +1,22 @@
 @charset "utf-8";
+@import "compass";
+
+.index {
+  .reveal section img {
+    margin: 45px 20px 20px;
+
+    &.no-background {
+      background: none;
+    }
+
+    &.no-border {
+      border: none;
+    }
+
+    &.no-shadow {
+      -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+      -moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+  }
+}
