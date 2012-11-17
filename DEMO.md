@@ -1,4 +1,5 @@
 # Redis
+http://redis.io/
 
 ## Start demo
 set foo bar
@@ -115,3 +116,32 @@ r.get('foo')
 ```
 
 # MongoDB
+http://www.mongodb.org/
+
+## CREATING TABLES
+
+<table>
+  <tr>
+    <th>SQL</th>
+    <th>NOSQL</th>
+  </tr>
+  <tr>
+    <td>CREATE TABLE boobs ( name VARCHAR(255), size INT );/td>
+    <td>-</td>
+  </tr>
+</table>
+
+
+## INSERTING
+
+
+<table>
+  <tr>
+    <th>SQL</th>
+    <th>NOSQL</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
