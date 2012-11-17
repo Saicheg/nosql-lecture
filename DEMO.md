@@ -2,8 +2,11 @@
 http://redis.io/
 
 ## Start demo
+
+```
 set foo bar
 get foo
+```
 
 ## Data structures demo
 http://redis.io/commands
@@ -123,7 +126,7 @@ http://www.mongodb.org/
 <table>
   <tr>
     <th>SQL</th>
-    <th>NOSQL</th>
+    <th>MongoDB</th>
   </tr>
   <tr>
     <td>CREATE TABLE boobs ( name VARCHAR(255), size INT );/td>
@@ -138,10 +141,48 @@ http://www.mongodb.org/
 <table>
   <tr>
     <th>SQL</th>
-    <th>NOSQL</th>
+    <th>MongoDB</th>
+  </tr>
+  <tr>
+    <td>INSERT INTO boobs VALUES('Pamela Anderson', 5)</td>
+    <td>db.boobs.insert({name: 'Pamela Anderson', size: 5})</td>
+  </tr>
+</table>
+
+
+## SELECT
+
+<table>
+  <tr>
+    <th>SQL</th>
+    <th>MongoDB</th>
   </tr>
   <tr>
     <td></td>
     <td></td>
   </tr>
 </table>
+
+<table>
+  <tr>
+    <th>SQL</th>
+    <th>MongoDB</th>
+  </tr>
+  <tr>
+    <td>SELECT * FROM boobs;</td>
+    <td>db.boobs.find()</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>SQL</th>
+    <th>MongoDB</th>
+  </tr>
+  <tr>
+    <td>SELECT name, size FROM boobs;</td>
+    <td>db.boobs.find({}, {name: true, size: true, _id: false})</td>
+  </tr>
+</table>
+
+
