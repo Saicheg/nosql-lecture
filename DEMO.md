@@ -50,7 +50,7 @@ sadd friends:duncan paul jessica alia
 ```
 
 * Regardless of how many friends a user has, we can efficiently tell (O(1)) whether userX is a
-friend of userY or not
+friend of userY or not:
 
 ```
 sismember friends:leto jessica
@@ -58,22 +58,28 @@ sismember friends:leto vladimir
 ```
 
 * Furthermore we can see what two or more people share the same friends:
+
 ```
 sinter friends:leto friends:duncan
 ```
+
 * and even store the result at a new key:
+
 ```
 sinterstore friends:leto_duncan friends:leto friends:duncan
 ```
+
 ## SORTED SETS
 ```
 zadd friends:john 100 ghanima 95 paul 95 chani 75 jessica 1 vladimir
 ```
 * Want to find out how many friends leto has with a rank of 90 or over?
+
 ```
 zcount friends:john 90 100
 ```
 * How about figuring out chanis rank?
+
 ```
 zrevrank friends:john chani
 ```
