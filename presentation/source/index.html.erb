@@ -19,39 +19,100 @@
 </section>
 
 <section>
-  <h1>My own definition goes here...</h1>
+  <h3>What i think when someone says "SQL"</h3>
+  <%= image_tag 'dude.jpg', :class => 'no-background no-border no-shadow' %>
+</section>
+
+<section class="acid">
+  <h3>Principles</h3>
+  <ul>
+    <li><strong>A</strong>tomicity: All or nothing</li>
+    <li><strong>C</strong>onsistency: Any transactions will take db from one state to another, with no broken constrains</li>
+    <li><strong>I</strong>solation: Other operations cannot access data that has been modified during a transaction that has not yet completed</li>
+    <li><strong>D</strong>urability: Ability to recover the commited transaction updates against any kind of system failure(transaction log)</li>
+  </ul>
+</section>
+
+<section class="normal-forms">
+  <h3>Normal forms</h3>
+  <ul>
+    <li><strong>1</strong>st normal form: Table faithfully represents a relation and has no repeating groups</li>
+    <li><strong>2</strong>nd normal form: No non-prime attribute in the table is functionally dependent on a proper subset of any candidate key</li>
+    <li><strong>3</strong>rd normal form: Every non-prime attribute is non-transitively dependent on every candidate key in the table. The attributes that do not contribute to the description of the primary key are removed from the table. In other words, no transitive dependency is allowed.</li>
+  </ul>
 </section>
 
 <section>
-  <%= image_tag 'history.jpg', :class => 'no-background no-border no-shadow' %>
+  <h3>Normal forms</h3>
+  <%= image_tag 'table.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
 <section>
-  <h1>Names of databases</h1>
+  <h3>Normal forms</h3>
+  <%= image_tag 'wat2.jpg', :class => 'no-background no-border no-shadow' %>
 </section>
 
 <section>
-  <h1>All names of databases</h1>
+  <h3>What i know</h3>
+  <%= image_tag 'dbiknow.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
 <section>
-  <h1>Principles(ACID)</h1>
+  <h3>What exists</h3>
+  <%= image_tag 'dbexists.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
 <section>
-  <h1>Classifications</h1>
+  <h3>Classifications</h3>
+  <ul>
+    <li>Key-values Stores</li>
+    <li>Column Family Stores</li>
+    <li>Document Databases</li>
+    <li>Graph Databases</li>
+    <li>And more...</li>
+  </ul>
 </section>
 
 <section>
-  <h1></h1>
+  <h3>Key-values Stores</h3>
+  <%= image_tag 'db-key-value.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
 <section>
-  <h1></h1>
+  <h3>Column Family Stores</h3>
+  <%= image_tag 'db-wide-column.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
 <section>
-  <h1>My own definition goes here...</h1>
+  <h3>Document Databases</h3>
+  <%= image_tag 'db-document.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
+<section>
+  <h3>Graph Databases</h3>
+  <%= image_tag 'db-graph.png', :class => 'no-background no-border no-shadow' %>
+</section>
 
+<section>
+  <h2>Demo time!</h2>
+  <!-- Some funny image here -->
+</section>
+
+<section>
+  <%= image_tag 'redis-logo.png', :class => 'no-background no-border no-shadow' %>
+</section>
+
+<section>
+  <h2>Redis structures</h2>
+  <ul>
+    <li>Strings</li>
+    <li>Hashes</li>
+    <li>Lists</li>
+    <li>Sets</li>
+    <li>Sorted sets</li>
+  </ul>
+</section>
+
+<section>
+  <%= image_tag 'demo1.png' %>
+</section>

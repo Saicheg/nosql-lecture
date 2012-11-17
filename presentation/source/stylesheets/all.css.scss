@@ -1,22 +1,54 @@
 @charset "utf-8";
 @import "compass";
 
-.index {
-  .reveal section img {
-    margin: 45px 20px 20px;
+.index .reveal {
+  section {
+    img {
+      margin: 45px 20px 20px;
 
-    &.no-background {
-      background: none;
+      &.no-background {
+        background: none;
+      }
+
+      &.no-border {
+        border: none;
+      }
+
+      &.no-shadow {
+        -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+        -moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+      }
     }
 
-    &.no-border {
-      border: none;
+    &.acid {
+      ul {
+        list-style: none;
+        li {
+          margin-top: 25px;
+          &:first-child {
+            margin-top: 0;
+          }
+          strong {
+            font-size: 60px;
+          }
+        }
+      }
     }
 
-    &.no-shadow {
-      -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
-      -moz-box-shadow: 0 0 0 rgba(0,0,0,0);
-      box-shadow: 0 0 0 rgba(0,0,0,0);
+    &.normal-forms {
+      ul {
+        list-style: none;
+        li {
+          margin-top: 25px;
+          &:first-child {
+            margin-top: 0;
+          }
+          strong {
+            font-size: 50px;
+          }
+        }
+      }
     }
   }
 }
