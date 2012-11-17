@@ -125,22 +125,51 @@ http://www.mongodb.org/
 
 SQL | MongoDB
 ------------ | -------------
-CREATE TABLE boobs ( name VARCHAR(255), size INT ); | 
+CREATE TABLE boobs ( name VARCHAR(255), size INT ); |
 
 
-## INSERTING
+## CREATING
 
 SQL | MongoDB
 ------------ | -------------
 INSERT INTO boobs VALUES('Pamela Anderson', 5); | db.boobs.insert({name: 'Pamela Anderson', size: 5})
 
 
-## SELECT
-
+## READING
 
 SQL | MongoDB
 ------------ | -------------
 SELECT * FROM boobs; | db.boobs.find()
 SELECT name, size FROM boobs; | db.boobs.find({}, {name: true, size: true, _id: false})
+SELECT * FROM boobs WHERE size = 3; | db.boobs.find({size: 3})
+SELECT * FROM boobs WHERE size > 3; | db.boobs.find({size: {$gt: 3}})
+SELECT * FROM boobs WHERE name LIKE "%Pamela%"; | db.boobs.find({name: /Pamela/})
+SELECT * FROM boobs WHERE name LIKE "Pamela%"; | db.boobs.find({name: /^Pamela/})
+SELECT * FROM boobs WHERE size > 3 AND name = 'Kirsten Dunst'; | db.boobs.find({size: 3, name: 'Kirsten Dunst'})
+SELECT * FROM boobs WHERE size > 3 AND size < 5; | db.boobs.find({size: {$gt: 3, $lt: 5}})
+SELECT * FROM boobs WHERE size > 3 OR name='Mischa Barton'; | db.boobs.find({$or: [{size: 3},  {name: 'Mischa Barton'}]})
+SELECT * FROM boobs WHERE size=4 ORDER BY name; | db.boobs.find({size: 4}).sort({name: 1})
+SELECT * FROM boobs ORDER BY name DESC; | db.boobs.find().sort({name: -1})
+SELECT * FROM boobs LIMIT 10; | db.boobs.find().limit(10)
+SELECT * FROM boobs LIMIT 1; | db.boobs.findOne()
+SELECT DISTINCT size FROM boobs; | db.boobs.distinct('size')
+SELECT COUNT(1) FROM boobs; | db.boobs.count()
 
+
+## UPDATING
+SQL | MongoDB
+------------ | -------------
+UPDATE boobs SET size=6 WHERE name='Maria Rasputina'; | db.boobs.update({name: 'Maria Rasputina'}, {$set: {size: 6}, false, true}
+UPDATE boobs SET size=size+2 WHERE name='Madonna'; | db.boobs.update({name: 'Madonna'}, {$inc: {size: 2}}, false, true)
+
+## DELETING
+SQL | MongoDB
+------------ | -------------
+DELETE FROM boobs WHERE size = 1; | db.boobs.remove({size: 1})
+
+## INDEXING
+SQL | MongoDB
+------------ | -------------
+UPDATE boobs SET size=6 WHERE name='Maria Rasputina'; | db.boobs.update({name: 'Maria Rasputina'}, {$set: {size: 6}, false, true}
+UPDATE boobs SET size=size+2 WHERE name='Madonna'; | db.boobs.update({name: 'Madonna'}, {$inc: {size: 2}}, false, true)
 
