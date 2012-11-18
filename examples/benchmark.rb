@@ -1,7 +1,7 @@
 require 'redis'
 require 'mysql2'
-require 'pry'
 require 'benchmark'
+require 'mongo'
 N = 1000
 
 def mysql_benchmark(operation)
@@ -34,6 +34,21 @@ def redis_benchmark(operation)
   end
 end
 
+def mongodb_benchmark(operation)
+  client = Mongo::Connection.new('localhost', 27017).db('test').collection('foobars')
+  if operation == "read"
+    Benchmark.measure do |x|
+      1.upto(N) { |n| client.find({'_id' => n.to_s}) }
+    end
+  elsif operation == "write"
+    client.drop
+    Benchmark.measure do |x|
+      1.upto(N) { |n| client.insert({'_id' => n.to_s, 'value' => 'foobar'}) }
+    end
+  end
+end
+
+
 if ARGV.count < 2
   puts "Usage <db type> read|write"
   exit
@@ -44,5 +59,6 @@ type, operation = ARGV[0], ARGV[1]
 time = case type
        when /mysql/ then mysql_benchmark(operation)
        when /redis/ then redis_benchmark(operation)
+       when /mongo/ then mongodb_benchmark(operation)
        end
 puts "Time: #{time.real}"
