@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mysql -u root -proot nosql < /home/sai/Projects/nosql-lecture/db/boobs.sql
+mongoimport -d nosql -c boobs --drop < /home/sai/Projects/nosql-lecture/db/boobs.json

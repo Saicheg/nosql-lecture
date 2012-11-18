@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "50a8ce221f4f5cba3e9c78e1" }, "name" : "Pamela Anderson", "size" : 5 }
+{ "_id" : { "$oid" : "50a8ce301f4f5cba3e9c78e2" }, "name" : "Kirsten Dunst", "size" : 2 }
+{ "_id" : { "$oid" : "50a8ce3e1f4f5cba3e9c78e3" }, "name" : "Mischa Barton", "size" : 2 }
+{ "_id" : { "$oid" : "50a8ce581f4f5cba3e9c78e4" }, "name" : "Rachel Bilson", "size" : 3 }
+{ "_id" : { "$oid" : "50a8ce651f4f5cba3e9c78e5" }, "name" : "Maria Rasputina", "size" : 5 }
+{ "_id" : { "$oid" : "50a8ce6d1f4f5cba3e9c78e6" }, "name" : "Madonna", "size" : 4 }
+{ "_id" : { "$oid" : "50a8ce781f4f5cba3e9c78e7" }, "name" : "Keira Knightley", "size" : 1 }
