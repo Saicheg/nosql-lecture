@@ -13,7 +13,7 @@
 
 <section>
   <p>
-    NoSQL — термин, обозначающий ряд подходов, проектов, направленных на реализацию моделей баз данных, имеющих существенные отличия от используемых в традиционных реляционных СУБД с доступом к данным средствами языка SQL.
+    NoSQL is a broad class of database management systems identified by non-adherence to the widely used relational database management system model.
   </p>
   <%= image_tag 'wiki.png', :class => 'no-background no-border no-shadow' %>
 </section>
@@ -24,7 +24,7 @@
 </section>
 
 <section class="acid">
-  <h3>Principles</h3>
+  <h3>SQL principles</h3>
   <ul>
     <li><strong>A</strong>tomicity: All or nothing</li>
     <li><strong>C</strong>onsistency: Any transactions will take db from one state to another, with no broken constrains</li>
@@ -47,8 +47,16 @@
   <%= image_tag 'table.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
+<section class="acid">
+  <h3>NoSql principles</h3>
+  <ul>
+    <li><strong>BA</strong>sically available indicates that the system does guarantee availability, in terms of the CAP theorem.</li>
+    <li><strong>S</strong>oft state indicates that the state of the system may change over time, even without input. This is because of the eventual consistency model.</li>
+    <li><strong>E</strong>ventual consistency indicates that the system will become consistent over time, given that the system doesn't receive input during that time.  </li>
+  </ul>
+</section>
+
 <section>
-  <h3>Normal forms</h3>
   <%= image_tag 'wat2.jpg', :class => 'no-background no-border no-shadow' %>
 </section>
 
@@ -66,9 +74,9 @@
   <h3>Classifications</h3>
   <ul>
     <li>Key-values Stores</li>
-    <li>Column Family Stores</li>
     <li>Document Databases</li>
     <li>Graph Databases</li>
+    <li>Column Family Stores</li>
     <li>And more...</li>
   </ul>
 </section>
@@ -76,11 +84,6 @@
 <section>
   <h3>Key-values Stores</h3>
   <%= image_tag 'db-key-value.png', :class => 'no-background no-border no-shadow' %>
-</section>
-
-<section>
-  <h3>Column Family Stores</h3>
-  <%= image_tag 'db-wide-column.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
 <section>
@@ -94,13 +97,17 @@
 </section>
 
 <section>
-  <h2>Demo time!</h2>
-  <h2>Линия отрыва</h2>
-  <!-- Some funny image here -->
+  <h3>Column Family Stores</h3>
+  <%= image_tag 'db-wide-column.png', :class => 'no-background no-border no-shadow' %>
+</section>
+
+
+<section>
+  <%= image_tag 'mad.jpg', :class => 'no-background no-border no-shadow' %>
 </section>
 
 <section>
-  <%= image_tag 'redis-logo.png', :class => 'no-background no-border no-shadow' %>
+  <a href='http://redis.io/'><%= image_tag 'redis-logo.png', :class => 'no-background no-border no-shadow' %></a>
 </section>
 
 <section>
@@ -119,7 +126,7 @@
 </section>
 
 <section>
-  <%= image_tag 'mongo.png', :class => 'no-background no-border no-shadow' %>
+  <a href='http://www.mongodb.org/'><%= image_tag 'mongo.png', :class => 'no-background no-border no-shadow' %></a>
 </section>
 
 <section>
@@ -141,7 +148,7 @@
     <li>Arrays</li>
     <li>Hashes</li>
     <li>Timestamps</li>
-    <li>and much <a href='http://bsonspec.org/#/specification' target='_blank'>more...</a></li>
+    <li>and much <a href='http://bsonspec.org/#/specification'>more...</a></li>
   </ul>
 </section>
 
@@ -194,17 +201,17 @@ db.parts.find()
 </section>
 
 <section>
-  <h2>What we do not talk about:</h2>
+  <h3>What we do not talk about:</h3>
   <ul>
-    <li>Geolocational indexes</li>
-    <li>Sharding</li>
-    <li>Map/reduce</li>
+    <li>Mongo: Geolocational indexes</li>
+    <li>Mongo: Sharding</li>
+    <li>Mongo: Map/reduce</li>
+    <li>NoSql: Benchmarks</li>
   </ul>
-</seciton>
-
+</section>
 
 <section>
-<%= image_tag 'end.jpg', :class => 'no-background no-border no-shadow' %>
+  <%= image_tag 'end.jpg', :class => 'no-background no-border no-shadow' %>
 </section>
 
 
