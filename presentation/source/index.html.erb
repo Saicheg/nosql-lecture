@@ -146,12 +146,62 @@
 </section>
 
 <section>
-  <h2>One-to-many relations</h2>
+  <h2>1-1</h2>
+  <%= image_tag 'one-to-one.png', :class => 'no-background no-border no-shadow' %>
+  <pre class="fragment"><code contenteditable>
+db.suppliers.findOne()
+#=> {'_id': 1, name: 'Samsung', account: {account_number: '1asd122d'}}
+  </code></pre>
 </section>
 
 <section>
-  <h2>Many-to-many relations</h2>
+  <h2>1-*</h2>
+  <%= image_tag 'one-to-many.png', :class => 'no-background no-border no-shadow' %>
+  <pre class="fragment"><code contenteditable>
+db.customets.findOne()
+#=> {'_id': 1, name: 'John', orders:[{'item_name': 'duck', date: '2011/11/11'}, {'item_name': 'ballon', date: '2011/11/15'}]}
+  </code></pre>
 </section>
+
+<section>
+  <h2>1-*</h2>
+  <%= image_tag 'one-to-many.png', :class => 'no-background no-border no-shadow' %>
+  <pre class="fragment"><code contenteditable>
+db.customets.findOne()
+#=> {'_id': 1, name: 'John', orders:[1,2]}
+db.orders.find()
+#=> [{'_id': 1, 'item_name': 'duck', date: '2011/11/11'}, {'_id': 2, 'item_name': 'ballon', date: '2011/11/15'}]
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>*-*</h2>
+  <%= image_tag 'many-to-many.png', :class => 'no-background ' %>
+</section>
+
+<section>
+  <h2>*-*</h2>
+  <pre><code contenteditable>
+db.assemblies.find()
+#=> [{'_id': 1, name: 'Motorolla MPx200 v1', parts:[1,2]},
+#    {'_id': 2, name: 'Motorolla MPx200 v2'}, parts:[1,2,3]]
+db.parts.find()
+#=> [{'_id': 1, name: 'display', assemblies: [1,2]},
+#    {'_id': 2, name: 'buttons', assemblies: [1,2]},
+#    {'_id': 3, name: 'secret',  assemblies: [3]}]
+  </code></pre>
+</section>
+
+<section>
+  <h2>What we do not talk about:</h2>
+  <ul>
+    <li>Geolocational indexes</li>
+    <li>Sharding</li>
+    <li>Map/reduce</li>
+  </ul>
+</seciton>
+
 
 <section>
 <%= image_tag 'end.jpg', :class => 'no-background no-border no-shadow' %>
