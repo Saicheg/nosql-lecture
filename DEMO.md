@@ -175,6 +175,5 @@ DELETE FROM boobs WHERE size = 1; | db.boobs.remove({size: 1})
 ## INDEXING
 SQL | MongoDB
 ------------ | -------------
-UPDATE boobs SET size=6 WHERE name='Maria Rasputina'; | db.boobs.update({name: 'Maria Rasputina'}, {$set: {size: 6}, false, true}
-UPDATE boobs SET size=size+2 WHERE name='Madonna'; | db.boobs.update({name: 'Madonna'}, {$inc: {size: 2}}, false, true)
+CREATE INDEX super_index ON boobs(name); | db.boobs.ensureIndex({name: 1},{name:'super_index'})
 

@@ -28,3 +28,4 @@ Materials for NoSql lecture for juniours
 * http://openmymind.net/redis.pdf
 * http://guides.rubyonrails.org/association_basics.html
 * http://habrahabr.ru/post/152477/
+* http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/
