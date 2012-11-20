@@ -27,3 +27,4 @@ Materials for NoSql lecture for juniours
 * http://habrahabr.ru/post/144054/
 * http://openmymind.net/redis.pdf
 * http://guides.rubyonrails.org/association_basics.html
+* http://habrahabr.ru/post/152477/
