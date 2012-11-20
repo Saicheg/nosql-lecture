@@ -41,8 +41,9 @@ hdel users:goku age
 
 ## LISTS
 ```
-rpush newusers goku
-ltrim newusers 0 50
+rpush newusers goku # 5 times
+lrange newusers 0 10
+ltrim newusers 0 2
 lrange newusers 0 10
 ```
 
@@ -59,6 +60,10 @@ friend of userY or not:
 ```
 sismember friends:leto jessica
 sismember friends:leto vladimir
+```
+
+```
+smembers friends:leto
 ```
 
 * Furthermore we can see what two or more people share the same friends:
