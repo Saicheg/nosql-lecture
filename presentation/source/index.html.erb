@@ -18,47 +18,6 @@
   <%= image_tag 'wiki.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
-<section>
-  <h3>What i think when someone says "SQL"</h3>
-  <%= image_tag 'dude.jpg', :class => 'no-background no-border no-shadow' %>
-</section>
-
-<section class="acid">
-  <h3>SQL principles</h3>
-  <ul>
-    <li><strong>A</strong>tomicity: All or nothing</li>
-    <li><strong>C</strong>onsistency: Any transactions will take db from one state to another, with no broken constrains</li>
-    <li><strong>I</strong>solation: Other operations cannot access data that has been modified during a transaction that has not yet completed</li>
-    <li><strong>D</strong>urability: Ability to recover the commited transaction updates against any kind of system failure(transaction log)</li>
-  </ul>
-</section>
-
-<section class="normal-forms">
-  <h3>Normal forms</h3>
-  <ul>
-    <li><strong>1</strong>st normal form: Table faithfully represents a relation and has no repeating groups</li>
-    <li><strong>2</strong>nd normal form: No non-prime attribute in the table is functionally dependent on a proper subset of any candidate key</li>
-    <li><strong>3</strong>rd normal form: Every non-prime attribute is non-transitively dependent on every candidate key in the table. The attributes that do not contribute to the description of the primary key are removed from the table. In other words, no transitive dependency is allowed.</li>
-  </ul>
-</section>
-
-<section>
-  <h3>Normal forms</h3>
-  <%= image_tag 'table.png', :class => 'no-background no-border no-shadow' %>
-</section>
-
-<section class="acid">
-  <h3>NoSql principles</h3>
-  <ul>
-    <li><strong>BA</strong>sically available indicates that the system does guarantee availability, in terms of the CAP theorem.</li>
-    <li><strong>S</strong>oft state indicates that the state of the system may change over time, even without input. This is because of the eventual consistency model.</li>
-    <li><strong>E</strong>ventual consistency indicates that the system will become consistent over time, given that the system doesn't receive input during that time.  </li>
-  </ul>
-</section>
-
-<section>
-  <%= image_tag 'wat2.jpg', :class => 'no-background no-border no-shadow' %>
-</section>
 
 <section>
   <h3>What i know</h3>
@@ -69,19 +28,6 @@
   <h3>What exists</h3>
   <%= image_tag 'dbexists.png', :class => 'no-background no-border no-shadow' %>
 </section>
-
-<section>
-  <h3>Features</h3>
-  <ul>
-    <li>No SQL</li>
-    <li>Schemaless</li>
-    <li>Aggregates</li>
-    <li>Replication</li>
-    <li>Open-source</li>
-  </ul>
-  <%= image_tag 'bug_vs_feature.gif', :class => 'no-background no-border no-shadow' %>
-</section>
-
 
 <section>
   <h3>Classifications</h3>
@@ -114,24 +60,8 @@
   <%= image_tag 'db-wide-column.png', :class => 'no-background no-border no-shadow' %>
 </section>
 
-
-<section>
-  <%= image_tag 'mad.jpg', :class => 'no-background no-border no-shadow' %>
-</section>
-
 <section>
   <a href='http://redis.io/'><%= image_tag 'redis-logo.png', :class => 'no-background no-border no-shadow' %></a>
-</section>
-
-<section>
-  <h2>Redis structures</h2>
-  <ul>
-    <li>Strings</li>
-    <li>Hashes</li>
-    <li>Lists</li>
-    <li>Sets</li>
-    <li>Sorted sets</li>
-  </ul>
 </section>
 
 <section>
@@ -166,65 +96,5 @@
 </section>
 
 <section>
-  <h2>1-1</h2>
-  <%= image_tag 'one-to-one.png', :class => 'no-background no-border no-shadow' %>
-  <pre class="fragment"><code contenteditable>
-db.suppliers.findOne()
-#=> {'_id': 1, name: 'Samsung', account: {account_number: '1asd122d'}}
-  </code></pre>
-</section>
-
-<section>
-  <h2>1-*</h2>
-  <%= image_tag 'one-to-many.png', :class => 'no-background no-border no-shadow' %>
-  <pre class="fragment"><code contenteditable>
-db.customets.findOne()
-#=> {'_id': 1, name: 'John', orders:[{'item_name': 'duck', date: '2011/11/11'}, {'item_name': 'ballon', date: '2011/11/15'}]}
-  </code></pre>
-</section>
-
-<section>
-  <h2>1-*</h2>
-  <%= image_tag 'one-to-many.png', :class => 'no-background no-border no-shadow' %>
-  <pre class="fragment"><code contenteditable>
-db.customets.findOne()
-#=> {'_id': 1, name: 'John', orders:[1,2]}
-db.orders.find()
-#=> [{'_id': 1, 'item_name': 'duck', date: '2011/11/11'}, {'_id': 2, 'item_name': 'ballon', date: '2011/11/15'}]
-  </code></pre>
-</section>
-
-
-<section>
-  <h2>*-*</h2>
-  <%= image_tag 'many-to-many.png', :class => 'no-background ' %>
-</section>
-
-<section>
-  <h2>*-*</h2>
-  <pre><code contenteditable>
-db.assemblies.find()
-#=> [{'_id': 1, name: 'Motorolla MPx200 v1', parts:[1,2]},
-#    {'_id': 2, name: 'Motorolla MPx200 v2'}, parts:[1,2,3]]
-db.parts.find()
-#=> [{'_id': 1, name: 'display', assemblies: [1,2]},
-#    {'_id': 2, name: 'buttons', assemblies: [1,2]},
-#    {'_id': 3, name: 'secret',  assemblies: [3]}]
-  </code></pre>
-</section>
-
-<section>
-  <h3>What we do not talk about:</h3>
-  <ul>
-    <li>Mongo: Geolocational indexes</li>
-    <li>Mongo: Sharding</li>
-    <li>Mongo: Map/reduce</li>
-    <li>NoSql: Benchmarks</li>
-  </ul>
-</section>
-
-<section>
   <%= image_tag 'end.jpg', :class => 'no-background no-border no-shadow' %>
 </section>
-
-
