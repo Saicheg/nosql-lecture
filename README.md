@@ -29,3 +29,4 @@ Materials for NoSql lecture for juniours
 * http://guides.rubyonrails.org/association_basics.html
 * http://habrahabr.ru/post/152477/
 * http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/
+* http://blog.mongodb.org/post/28053108398/edda-a-log-visualizer-for-mongodb

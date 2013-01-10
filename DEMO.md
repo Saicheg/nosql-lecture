@@ -177,3 +177,58 @@ SQL | MongoDB
 ------------ | -------------
 CREATE INDEX super_index ON boobs(name); | db.boobs.ensureIndex({name: 1},{name:'super_index'})
 
+## REPLICA SET
+
+* Create replica by running:
+```
+cd examples/
+./replica_set
+```
+
+* Initialize config:
+```
+mongo --shell --port 27001 init.js
+init()
+```
+
+* Add some data:
+** Go to master database
+```
+db.foo.insert({_id:1})
+db.foo.insert({_id:2})
+db.foo.insert({_id:3})
+```
+
+* Drop primary server
+```
+ps aux | grep mongo
+kill -9 <PID>
+```
+
+* Check if data is still here:
+```
+mongo --port 2700[123]
+```
+
+* Add more data:
+```
+db.foo.insert({_id:4})
+db.foo.insert({_id:5})
+db.foo.insert({_id:6})
+```
+
+* Rollback server
+** Pay attention wich server you killed
+```
+mongod --replSet demo --dbpath replica_data/1 --port 27001 --smallfiles --oplogSize 50 --logpath replica_data/log.1 --logappend --fork
+```
+
+* Check what data we have again:
+```
+mongo --port 2700[123]
+```
+
+* Visualize what happened
+```
+edda log.1 log.2 log.3
+```

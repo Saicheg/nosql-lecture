@@ -1,0 +1,14 @@
+#!/bin/bash
+
+mkdir replica_data
+mkdir replica_data/1
+mkdir replica_data/2
+mkdir replica_data/3
+
+mongod --replSet demo --dbpath replica_data/1 --port 27001 --smallfiles --oplogSize 50 --logpath replica_data/log.1 --logappend --fork
+mongod --replSet demo --dbpath replica_data/2 --port 27002 --smallfiles --oplogSize 50 --logpath replica_data/log.2 --logappend --fork
+mongod --replSet demo --dbpath replica_data/3 --port 27003 --smallfiles --oplogSize 50 --logpath replica_data/log.3 --logappend --fork
+
+sleep 1
+
+echo mongod is ready, please run 'mongo --shell --port 27001 init.js'
